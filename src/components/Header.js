@@ -18,10 +18,10 @@ function Header() {
             </Main>
             <UserContainer>
                 <Name>
-                    Irida B.
+                    Irida Balliu
                 </Name>
                 <UserImage>
-                    <img src="https://i1.sndcdn.com/avatars-000084565212-4ugj8l-t500x500.jpg"/>
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQF6Q4ZsmHtHgw/profile-displayphoto-shrink_200_200/0/1603559892570?e=1619654400&v=beta&t=C7itJ7-QzHB7cPQB7wcjN7zccq7dYUktCah3wc83O8A"/>
                 </UserImage>
 
             </UserContainer>
@@ -38,7 +38,7 @@ const Container = styled.div`
  align-items: center;
  justify-content: center;
  position: relative;
- box-shadow: inset 0 0 0 1px #36C0CA;
+ box-shadow: inset 0 0 0 1px rgba(133,131,133,1);
 `
 
 const Main = styled.div`
@@ -55,7 +55,7 @@ const SearchContainer = styled.div`
 
 const Search = styled.div`
  width: 100%;
- box-shadow: inset 0 0 0 1px #36C0CA;
+ box-shadow: inset 0 0 0 1px rgba(133,131,133,1);
  border-radius: 7px;
  display: flex;
  align-items: center;

@@ -1,28 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 import InfoIcon from '@material-ui/icons/Info';
+import ChatInput from './ChatInput'
+import ChatMessage from './ChatMessage'
 
 function Chat() {
     return (
         <Container>
             <Header>
-                <FirstRow>
+                <Channel>
                     <ChannelName>
                         # introduce-yourself
                     </ChannelName>
+                    <ChannelDescription>
+                        Introductions to get to know each other better. Don't be shy!
+                    </ChannelDescription>
+                </Channel>
                     <Details>
                         <DetailName>
                             Details
                         </DetailName>
-                        <Icon>
-                            <InfoIcon />
-                        </Icon>
+                        <Info />
                     </Details>
-                </FirstRow>
-                <Description>
-                    Introductions to get to know each other better. Don't be shy!
-                </Description>
             </Header>
+            <MessageContainer>
+                <ChatMessage />
+
+            </MessageContainer>
+            <ChatInput />
         </Container>
     )
 }
@@ -30,40 +35,44 @@ function Chat() {
 export default Chat
 
 const Container = styled.div`
- 
+ display: grid;
+ grid-template-rows: 64px auto min-content;
 `
 const Header = styled.div`
- box-shadow: inset 1px  0 1px 1px rgba(133,131,133,1);
+ border-bottom: 1px solid rgba(133,131,133,1);
+ padding-left: 20px;
+ padding-right: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 `
 const ChannelName = styled.div`
  font-weight: bold;
  color: #36C0CA;
- font-size: 15px;
- padding-top: 10px;
+
 `
 const Details = styled.div`
- color: #E5E5E5;
- padding-right: 20px;
- padding-top: 10px;
- margin-left: 10px;
  display: flex;
- font-size: 15px;
- 
+ align-items: center;
+ color: #606060;
+ font-weight: 500;
 `
-const FirstRow = styled.div`
- display: flex;
- justify-content: space-between;
- padding-left: 10px;
+const Channel = styled.div`
+
 `
 const DetailName = styled.div`
 `
-const Icon = styled.div`
- margin-left: 5px;
- cursor: pointer;
-`
-const Description = styled.div`
- color: #E5E5E5;
+
+const ChannelDescription = styled.div`
+ color: #606060;
  font-size: 14px;
- padding-left: 10px;
- padding-bottom: 10px;
+ font-weight: 500;
+ margin-top: 8px;
+`
+const MessageContainer = styled.div`
+ color: #E1E1E1;
+`
+
+const Info = styled(InfoIcon)`
+ margin-left: 10px;
 `
